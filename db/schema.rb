@@ -11,19 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306075527) do
+ActiveRecord::Schema.define(version: 20150307062708) do
 
   create_table "lectures", force: :cascade do |t|
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "name",       limit: 255
-    t.string   "teacher",    limit: 255
-    t.integer  "grade",      limit: 4
-    t.string   "term",       limit: 255
-    t.integer  "day",        limit: 4
-    t.integer  "period",     limit: 4
-    t.string   "room",       limit: 255
-    t.text     "link_url",   limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "name",          limit: 255
+    t.integer  "grade",         limit: 4
+    t.string   "term",          limit: 255
+    t.integer  "university_id", limit: 4
   end
 
 end
