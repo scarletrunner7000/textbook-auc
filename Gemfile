@@ -43,4 +43,4 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'mechanize'
+gem 'selenium-webdriver'
