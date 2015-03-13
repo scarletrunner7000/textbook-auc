@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312110646) do
+ActiveRecord::Schema.define(version: 20150313015342) do
 
   create_table "books", force: :cascade do |t|
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "title",      limit: 255
     t.string   "author",     limit: 255
-    t.integer  "isbn",       limit: 4
     t.text     "image_url",  limit: 65535
+    t.integer  "isbn",       limit: 8
   end
 
   create_table "lecture_books", force: :cascade do |t|
