@@ -3,7 +3,6 @@ require 'selenium-webdriver'
 class Scraping
 
   @@NOT_FOUND = "not found"
-  @@UNIV_ID_KYOTO = 1
 
   def self.get
     lec_driver = Selenium::WebDriver.for :chrome
@@ -36,7 +35,7 @@ class Scraping
         if lec_url[-5..-1] == "60120" || lec_url[-5..-1] == "60130" # 論理回路 # 情報理論
           lecture_h[:term] = lec_texts[2]
         end
-        lecture_h[:university_id] = @@UNIV_ID_KYOTO
+        lecture_h[:university_id] = University.find_by(name: "京都大学").id
 
         puts lec_texts[0]
         puts lecture_h[:name]
