@@ -1,0 +1,32 @@
+<%= form_tag(books_path, method: :get) do %>
+  <h3>lecture</h3>
+  <div class="field">
+    <%= label_tag :name %>
+    <%= search_field_tag :name, @lecture.name, placeholder: '（講義名）' %>
+  </div>
+  <div class="field">
+    <%= label_tag :grade %>
+    <%= select_tag :grade, options_for_select({'（学年）' => 0, '1年' => 1, '2年' => 2, '3年' => 3, '4年' => 4, 'その他' => -1}) %>
+  </div>
+  <div class="field">
+    <%= label_tag :term %>
+    <%= search_field_tag :term, @lecture.term, placeholder: '（学期）' %>
+  </div>
+
+  <h3>book</h3>
+  <div class="field">
+    <%= label_tag :title %>
+    <%= search_field_tag :title, @book.title, placeholder: '（教科書名）' %>
+  </div>
+  <div class="field">
+    <%= label_tag :author %>
+    <%= search_field_tag :author, @book.author, placeholder: '（著者）' %>
+  </div>
+  <div class="field">
+    <%= label_tag :isbn %>
+    <%= search_field_tag :isbn, @book.isbn, placeholder: '（ISBNコード）' %>
+  </div>
+  <div class="actions">
+    <%= submit_tag '検索' %>
+  </div>
+<% end %>
