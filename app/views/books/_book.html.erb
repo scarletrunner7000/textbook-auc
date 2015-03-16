@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-body row">
+    <div class="col-sm-3">
+      <%= image_tag book.image_url, alt: book.title %>
+    </div>
+    <div class="col-sm-9">
+      <h3><%= book.title %></h3>
+      <table class="table">
+        <tr>
+          <th>Author</th>
+          <td><%= @book.author %></td>
+        </tr>
+        <tr>
+          <th>Isbn</th>
+          <td><%= @book.isbn %></td>
+        </tr>
+      </table>
+      <p><a href="" class="btn btn-primary" role="button">売る(出品)</a> <a href="" class="btn btn-default" role="button">Button</a></p>
+    </div>
+  </div>
+</div>
